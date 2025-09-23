@@ -98,16 +98,56 @@
         <!-- Contato -->
         <article>
             <h2>Contato</h2>
-            <h3>Fale conosco</h3>
-
-            <p>Entre em contato conosco para começarmos a trabalhar juntos na transformação digital do seu negócio.</p>
-
-            <p>Não perca tempo, preencha o formulário abaixo ou utilize os nossos canais de comunicação disponíveis: (11) 98765-4321 ou email@provedor.com.</p>
-
-            <p>Estamos apenas a um clique de distância para iniciar uma parceria de sucesso.</p>
+            <p>Estamos ansiosos para ouvir suas ideias, entender suas necessidades e oferecer soluções personalizadas que impulsionem seu sucesso online. Nossa equipe especializada está pronta para ajudá-lo em todas as etapas do processo, desde o planejamento inicial até o lançamento final do projeto.
+            </p> 
 
             <section>
-            <!-- Formulário! -->
+                <h3>Fale conosco</h3>
+                <p>Entre em contato conosco para começarmos a trabalhar juntos na transformação digital do seu negócio.</p>
+
+                <p>Não perca tempo, preencha o formulário abaixo ou utilize os nossos canais de comunicação disponíveis: 
+                <a href="tel:14996767882">(11) 98765-4321</a> ou <a href="mailto:email@provedor.com">email@provedor.com</a>.</p>
+
+                <p>Estamos apenas a um clique de distância para iniciar uma parceria de sucesso.</p>
+
+                <form action="" method="post">
+
+                    <!-- Nome -->
+                    <p>
+                        <label for="nome">Nome:</label>
+                        <input required type="text" name="nome" id="nome">
+                    </p>
+
+                    <!-- E-mail -->
+                     <p>
+                        <label required for="email">E-mail:</label>
+                        <input type="email" name="email" id="email">
+                     </p>
+
+                    <!-- Telefone -->
+                     <p>
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" name="telefone" id="telefone">
+                     </p>
+
+                    <!-- Assunto -->
+                     <p>
+                        <label for="assunto">Assunto:</label>
+                        <input type="text" name="assunto" id="assunto">
+                     </p>
+
+                    <!-- Mensagem -->
+                     <p>
+                        <label required for="mensagem">Mensagem</label>
+                        <textarea name="mensagem" id="mensagem"
+                        cols="40" rows="6"></textarea>
+                     </p>
+
+                    <!-- Botão de envio dos dados -->
+                     <button type="submit" id="enviar" name="enviar">Enviar</button>
+
+                </form>
+
              </section>
 
              <section>
