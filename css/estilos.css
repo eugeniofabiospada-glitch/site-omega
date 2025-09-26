@@ -1,28 +1,35 @@
+/* Importa duas fontes do Google Fonts: Open Sans e Orbitron */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap');
 
+/* Define que o cálculo de largura/altura inclui o padding e a borda */
 * {
     box-sizing: border-box;
 }
 
+/* Define tamanho base da fonte e rolagem suave ao clicar em âncoras */
 html {
     font-size: 18px;
     scroll-behavior: smooth;
 }
 
+/* Aplica fundo com imagem fixa + fonte padrão */
 body {
     background-image: url(../imagens/textura-fundo.png);
     background-attachment: fixed;
     font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Garante que imagens não ultrapassem o limite do contêiner */
 img {
     max-width: 100%;
 }
 
+/* Faz iframes ocuparem 100% da largura */
 iframe {
     width: 100%;
 }
 
+/* Remove margens e espaçamentos padrão de alguns elementos */
 body,
 h1,
 h2,
@@ -33,40 +40,48 @@ figure {
     padding: 0;
 }
 
+/* Links por padrão: sem sublinhado e pretos */
 a {
     text-decoration: none;
     color: black;
 }
 
+/* Links dentro da seção #contato ficam azuis */
 #contato a {
     color: blue;
 }
 
+/* Links de #contato ficam sublinhados ao passar mouse ou receber foco */
 #contato a:hover,
 #contato a:focus {
     text-decoration: underline;
 }
 
+/* Cabeçalho e rodapé: fundo cinza claro e centralização */
 header,
 footer {
     background-color: whitesmoke;
     text-align: center;
 }
 
+/* Cabeçalho: borda inferior + espaçamento abaixo */
 header {
     border-bottom: solid 1px;
     margin-bottom: 8px;
 }
 
+/* Rodapé: borda superior */
 footer {
     border-top: solid 1px;
 }
 
+/* Conteúdo principal centralizado com 95% da largura */
 main {
     width: 95%;
     margin: auto;
 }
 
+/* Artigos: fundo branco, sombra, espaçamento interno e externo */
 article {
     background-color: white;
     box-shadow: grey 1px 1px 5px;
@@ -74,6 +89,7 @@ article {
     padding: 8px;
 }
 
+/* Aplica fonte Orbitron em alguns elementos */
 h1,
 nav,
 h2,
@@ -83,20 +99,21 @@ article:first-child p {
     font-family: Orbitron, Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Espaçamento interno nos títulos e parágrafos */
 h2,
 h3,
 p {
     padding: 1% 0;
 }
 
+/* Primeiro artigo (capa): fundo com imagem fixa e centralização */
 article:first-child {
     background-image: url(../imagens/earth.jpg);
-
     height: 500px;
-
     background-attachment: fixed;
     background-position: top center;
 
+    /* Alinhamento com flexbox */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -106,6 +123,7 @@ article:first-child {
     padding: 0;
 }
 
+/* Estilo para h2 e p dentro do primeiro artigo */
 article:first-child h2,
 article:first-child p {
     width: 100%;
@@ -114,22 +132,25 @@ article:first-child p {
     background-color: rgba(0, 0, 0, 0.692);
     margin: 8px 0;
     padding: 2%;
-    border-top: solid 1px;
-    border-bottom: solid 1px;
+    border-top: solid 4px;
+    border-bottom: solid 4px;
 
+    /* Animação ao carregar */
     animation-name: aparecer;
     animation-duration: 2s;
 }
 
+/* Título da capa maior */
 article:first-child h2 {
     font-size: 60px;
 }
 
+/* Subtítulo da capa */
 article:first-child p {
     font-size: 24px;
 }
 
-/* Regra de animação */
+/* Animação de aparição */
 @keyframes aparecer {
     from {
         opacity: 0;
@@ -143,40 +164,46 @@ article:first-child p {
     }
 }
 
+/* Reduz tamanho das imagens do rodapé */
 footer img {
     width: 50px;
 }
 
-/* Medida REM insere metade do valor inserido na fonte padrão conforme a medida utilizada. */
+/* REM usa base da fonte HTML; aqui: 1.2 * 18px */
 footer h2 {
     font-size: 1.2rem;
 }
 
+/* Texto menor no rodapé */
 footer p {
     font-size: 0.8rem;
 }
 
+/* Espaçamento entre seções e figuras */
 section,
 figure {
     margin: 40px 0;
 }
 
+/* Centraliza figuras */
 figure {
     text-align: center;
 }
 
+/* Legendas em negrito e menores */
 figcaption {
     font-weight: bold;
     font-size: 0.8rem;
 }
 
-/* Regras temporárias para facilitar a visualização dos ajustes de espaços e alinhamnetos */
+/* Ajustes de depuração (comentados) 
+   h1 {background-color: red;}
+   h1 a {background-color: green;}
+   nav {background-color: yellow;}
+   nav a {background-color: lightblue;} 
+*/
 
-/* h1 {background-color: red;}
-h1 a {background-color: green;}
-nav {background-color: yellow;}
-nav a {background-color: lightblue;} */
-
+/* Cabeçalho e navegação centralizados com flex */
 h1,
 h1 a,
 nav,
@@ -186,26 +213,29 @@ nav a {
     align-items: center;
 }
 
+/* Estilo do título principal */
 h1 {
     padding: 5px 0;
     font-size: 1.8rem;
     letter-spacing: 4px;
 }
 
+/* Link do título: fundo preto, texto branco e arredondado */
 h1 a {
     background-color: black;
     color: white;
     padding: 8px 16px;
     border-radius: 8px;
-
 }
 
+/* Links do menu ocupam toda a largura disponível */
 nav a {
     height: 60px;
     font-size: 1rem;
     width: 100%;
 }
 
+/* Hover/focus no menu: fundo escuro, texto branco com sombra */
 nav a:hover,
 nav a:focus {
     background-color: rgba(0, 0, 0, 0.842);
@@ -213,6 +243,7 @@ nav a:focus {
     text-shadow: black 1px 1px 1px;
 }
 
+/* Campos de formulário ocupando 100% e com borda */
 input,
 textarea {
     border: solid 2px;
@@ -221,11 +252,13 @@ textarea {
     font-size: 0.9rem;
 }
 
+/* Labels em negrito e menores */
 label {
     font-weight: bold;
     font-size: 0.8rem;
 }
 
+/* Botões: fundo preto, texto branco e espaçamento */
 button {
     border: none;
     background-color: black;
@@ -235,12 +268,14 @@ button {
     letter-spacing: 4px;
 }
 
+/* Botões mudam para azul no hover/focus */
 button:hover,
 button:focus {
     background-color: darkblue;
     cursor: pointer;
 }
 
+/* Botão "voltar" (canto inferior direito fixo) */
 #voltar a {
     background-color: black;
     color: white;
@@ -248,20 +283,22 @@ button:focus {
     font-size: 0.7rem;
 }
 
+/* Hover/focus do botão voltar: azul escuro */
 #voltar a:hover,
 #voltar a:focus {
     background-color: darkblue;
 }
 
+/* Posição fixa do botão voltar */
 #voltar {
     position: fixed;
-    /* Coordenadas: 
-    top, botton, left, right, z-index */
     bottom: 6px;
     right: 6px;
 }
 
-/* Media Query */
+/* ---------- Media Queries ---------- */
+
+/* A partir de 710px: containers em flex e centralizados */
 @media screen and (min-width: 710px) {
     .container {
         display: flex;
@@ -271,17 +308,17 @@ button:focus {
     }
 }
 
+/* A partir de 750px: grupo de elementos lado a lado */
 @media screen and (min-width: 750px) {
     .grupo {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-
     }
 }
 
+/* Ajusta largura das seções dentro de grupo */
 @media screen and (min-width: 750px) {
-
     .grupo section,
     .grupo figure {
         width: 49%;
@@ -290,6 +327,12 @@ button:focus {
     }
 }
 
+/* A partir de 1000px: 
+   - cabeçalho fixo no topo
+   - remove botão voltar
+   - define margens de rolagem
+   - limita largura máxima
+   - aumenta fonte base */
 @media screen and (min-width: 1000px) {
     header {
         position: sticky;
